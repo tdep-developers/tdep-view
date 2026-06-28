@@ -1,0 +1,16 @@
+# Python build / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Example outputs
+examples/_output/
+
+# Large working artifacts (regenerated; not part of the package)
+traj.dump
+traj.gif
+xfc.log
