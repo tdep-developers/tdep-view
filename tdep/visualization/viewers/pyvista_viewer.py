@@ -194,14 +194,15 @@ class PyVistaViewer:
 def plot_average_deviation(
     trajectory,
     *,
-    arrow_scale: float = 10.0,
+    arrow_scale: float = 1.0,
     cmap: str = "plasma",
     off_screen: bool = False,
     screenshot=None,
     window_size: tuple[int, int] = (1024, 768),
 ):
     """Arrows from each matched ssposcar site to the trajectory-averaged position
-    (scaled by ``arrow_scale``, since deviations are ~0.1-1 A), coloured by deviation."""
+    (drawn at true length by default; raise ``arrow_scale`` to exaggerate the
+    ~0.1-1 A deviations), coloured by deviation."""
     pv = _import_pyvista()
     cmp = trajectory.compare_average_to_reference()
     lattice = trajectory.cell.lattice

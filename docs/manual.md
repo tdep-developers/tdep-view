@@ -183,7 +183,7 @@ to scrub through time. Colour options:
 ### Average-deviation view
 
 ```python
-traj.view_average_deviation(arrow_scale=10.0, cmap="plasma",
+traj.view_average_deviation(arrow_scale=1.0, cmap="plasma",
                             off_screen=True, screenshot="deviation.png")
 ```
 
